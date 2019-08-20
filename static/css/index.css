@@ -1,0 +1,475 @@
+/* 初始化字体 */
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+/* 定义顶部导航条开始 */
+/* 顶部最外层容器的样式*/
+#header_wrap {
+  width: 100%;
+  /* 设置最小宽度 */
+  min-width: 1226px;
+  height: 40px;
+  background-color: #333;
+}
+/* 居中容器的宽度 */
+#header {
+  width: 1226px;
+  height: 40px;
+  margin: 0 auto;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+/* hover 顶部的a标签 */
+#header a:hover {
+  color: #f9f9f9;
+}
+/* 左边菜单栏 */
+#header_menu {
+  color: #b0b0b0;
+  height: 40px;
+  float: left;
+}
+#header_menu > ul {
+  color: #b0b0b0;
+}
+#header_menu > ul > li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  position: relative;
+}
+#header_menu > ul > li > a {
+  color: #b0b0b0;
+  height: 40px;
+  line-height: 40px;
+  display: block;
+}
+#header ul > li:first-child {
+  padding-left: 0px;
+}
+#header ul > li + li::before {
+  content: '';
+  width: 1px;
+  height: 12px;
+  line-height: 12px;
+  background: #424242;
+  display: block;
+  position: absolute;
+  top: 14px;
+  left: 10px;
+}
+
+/* 右边登录栏 */
+#header_login {
+  float: right;
+}
+#header_login > ul > li {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#header_login > ul > li > a {
+  height: 40px;
+  line-height: 40px;
+  color: #b0b0b0;
+}
+/* 购物车 */
+#header_shopcar {
+  width: 120px;
+  height: 40px;
+  float: right;
+  line-height: 40px;
+  text-align: center;
+  background: #424242;
+  margin-left: 20px;
+  position: relative;
+  z-index: 999;
+}
+#shopcar_logo {
+  transition: all 0.3s;
+}
+/* 购物车图标 */
+#shopcar_logo > p > i {
+  font-size: 20px;
+  vertical-align: -2px;
+}
+/* 购物信息 */
+#shopcar_info {
+  width: 320px;
+  height: 0px;
+  position: absolute;
+  top: 40px;
+  left: -200px;
+  box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.5s;
+  background-color: #fff;
+  z-index: -1;
+}
+/* hover购物车 */
+#header_shopcar:hover #shopcar_logo {
+  color: #ff6700;
+  background: #fff;
+}
+#shopcar_info > p {
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  line-height: 100px;
+}
+#header_shopcar:hover #shopcar_info {
+  height: 100px;
+} /* 定义顶部导航条结束*/
+
+/* 定义主体导航条开始 */
+/* 主题导航条 */
+#nav-wrap {
+  position: relative;
+}
+#nav {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* logo */
+#logo {
+  width: 55px;
+  height: 55px;
+  background-color: #ff6700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#logo > img {
+  display: block;
+}
+/* 中间的菜单栏 */
+#nav_menu {
+  width: 600px;
+  margin-left: 188px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#nav_menu > ul {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#nav_menu > ul > li > a:hover {
+  color: #ff6700;
+}
+/* 菜单商品列表 */
+#menu-goods-list-wrap {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+#nav #nav_menu > ul > li #menu-goods-list-wrap > .menu-goods-list {
+  width: 1226px;
+  height: 0px;
+  margin: 0 auto;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+#nav #nav_menu > ul > li #menu-goods-list-wrap > .menu-goods-list > ul > li {
+  height: 228px;
+  width: 200px;
+  float: left;
+  text-align: center;
+  padding: 0 12px;
+  position: relative;
+}
+#nav #nav_menu > ul > li > a {
+  height: 100px;
+  display: block;
+  line-height: 100px;
+}
+/* hover特效 */
+#nav #nav_menu > ul > li > a:hover + #menu-goods-list-wrap > .menu-goods-list {
+  height: 230px;
+}
+
+#nav #nav_menu > ul > li > a + #menu-goods-list-wrap > .menu-goods-list:hover {
+  height: 230px;
+}
+/* 商品列表的a链接 */
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  > a {
+  display: block;
+  width: 200px;
+  height: 228px;
+}
+/* 商品列表的图片 */
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  > a
+  > img {
+  margin-top: 40px;
+}
+/* 商品列表的标题*/
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  > a
+  > p
+  > span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #333;
+}
+/* 商品列表的价格*/
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  > a
+  > p
+  > .goods-price {
+  color: #ff6700;
+} /* 商品列表之间的竖线 */
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  + li::before {
+  content: '';
+  width: 1px;
+  height: 110px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color: #e0e0e0;
+}
+/* 商品状态 */
+#nav
+  #nav_menu
+  > ul
+  > li
+  #menu-goods-list-wrap
+  > .menu-goods-list
+  > ul
+  > li
+  > a
+  > .goods-status {
+  padding: 1px 10px;
+  height: 20px;
+  border: 1px solid #ff6700;
+  position: absolute;
+  top: 0px;
+  left: 75px;
+  width: 50px;
+  line-height: 19px;
+  color: #ff6700;
+}
+
+/* 搜索框 */
+#nav #search {
+  position: relative;
+}
+#nav #search form {
+  display: flex;
+}
+#nav #search input[type='search'] {
+  width: 245px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+}
+#search button {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  color: #616161;
+  transition: all 0.3s;
+}
+#nav #search:hover input[type='search'],
+#nav #search:hover button {
+  border-color: #b0b0b0;
+}
+#nav #search button:hover {
+  background-color: #ff6700;
+  border: 1px solid #ff6700;
+  color: #fff;
+}
+#nav #search input[type='search']:focus,
+#nav #search input[type='search']:focus + button {
+  border-color: #ff6700;
+}
+/* 搜索数据列表 */
+#nav #search #datalist {
+  width: 243px;
+  border: 1px solid #ff6700;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  border-top: none;
+  font-size: 12px;
+  color: #e0e0e0;
+  display: none;
+  z-index: 1;
+  background: #fff;
+}
+#nav #search #datalist li a {
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#nav #search #datalist > ul > li :hover {
+  background-color: #fafafa;
+}
+#nav #search input[type='search']:focus ~ #datalist {
+  display: block;
+}
+/* 搜索框下拉商品列表 */
+.RecommendGoods > ul {
+  width: 140px;
+  height: 30px;
+  position: absolute;
+  bottom: 6px;
+  right: 55px;
+}
+
+.RecommendGoods > ul > li > a {
+  height: 20px;
+  width: 50px;
+  background: #f2f2f2;
+  font-size: 12px;
+  float: left;
+  padding: 2px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 20px;
+  color: #757575;
+  transition: all 0.3s;
+}
+
+.RecommendGoods > ul > li > a:hover {
+  background-color: #ff6700;
+  color: #fff;
+}
+#nav #search input[type='search']:focus ~ .RecommendGoods {
+  display: none;
+}
+/* 定义主体导航条结束 */
+
+/* 定义banner和左侧商品列表开始 */
+#banner-wrap {
+  width: 1226px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+}
+#banner-wrap #banner > img {
+  width: 1226px;
+}
+#banner-wrap #cate-menu {
+  width: 230px;
+  height: 460px;
+  background: rgba(0, 0, 0, 0.3);
+  /* background-color: green; */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#banner-wrap #cate-menu {
+  padding-top: 30px;
+  /* 以怪异盒模型显示 */
+  box-sizing: border-box;
+}
+#banner-wrap #cate-menu > ul > li {
+  height: 40px;
+  line-height: 40px;
+}
+#banner-wrap #cate-menu > ul > li > a {
+  color: #fff;
+  font-size: 14px;
+  padding-left: 30px;
+}
+#banner-wrap #cate-menu > ul > li:hover {
+  background: #ff6700;
+  cursor: pointer;
+}
+#banner-wrap #cate-menu > ul > li > a > .arrow {
+  float: right;
+  margin-right: 15px;
+  font-size: 20px;
+}
+#banner-wrap #cate-menu > ul > li > .cate-menu-list {
+  width: 775px;
+  height: 458px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  top: 0px;
+  left: 230px;
+  /* display: flex; */
+  display: none;
+}
+#banner-wrap #cate-menu > ul > li > .cate-menu-list > ul {
+  width: 230px;
+  height: 458px;
+  padding-left: 20px;
+  float: left;
+}
+#banner-wrap #cate-menu > ul > li > .cate-menu-list > ul > li {
+  height: 76px;
+  line-height: 76px;
+}
+#banner-wrap #cate-menu > ul > li > .cate-menu-list > ul > li > a > span {
+  font-size: 14px;
+}
+#banner-wrap #cate-menu > ul > li > .cate-menu-list > ul > li > a:hover {
+  color: #ff6700;
+}
+#banner-wrap #cate-menu > ul > li:hover > .cate-menu-list {
+  display: block;
+}
+/* 定义banner和左侧商品列表结束 */
