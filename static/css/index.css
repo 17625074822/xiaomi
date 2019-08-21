@@ -178,6 +178,7 @@ body {
   left: 0;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  z-index: 1;
 }
 #nav #nav_menu > ul > li #menu-goods-list-wrap > .menu-goods-list {
   width: 1226px;
